@@ -10,7 +10,7 @@
   --brand-color-dark: #1D4ED8;
   --bg-color: #0F172A;
   --stroke-color: #1E293B;
-  --text-color-primary: #F1F5F;
+  --text-color-primary: #F1F5F9;
   --text-color-secondary: #CBD5E1;
 
 
@@ -26,9 +26,16 @@
   --fw-sb: 600;
   --fw-bold: 700;
   --fw-eb: 800;
+
+  --py-xl: 2rem;
+  --py-lg: .875rem;
+  --py-md: 1rem;
+  --py-sm: .5rem;
 }
 
 html {
+
+  font: var(--ff-archivo);
 
   h1{
     font: var(--fw-eb) var(--fs-xl)/135% var(--ff-archivo);
@@ -52,5 +59,22 @@ html {
 
   strong {
     font: var(--fw-md) var(--fs-esm)/120% var(--ff-archivo) ;
+    color: var(--text-color-primary);
+    padding: 4px 8px;
+    background: #1D4ED8;
+    box-shadow: 0px 4px 16px rgba(2, 6, 23, 0.25);
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+
+  body {
+    background: var(--bg-color);
   }
 }
+
+/* Linear gradiente do efeito nos cards
+background: linear-gradient(180deg, rgba(2, 6, 23, 0) 0%, #020617 100%); */
+
+
+
+

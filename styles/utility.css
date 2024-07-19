@@ -1,0 +1,35 @@
+  .container {
+    padding-inline: 1rem;
+    max-width: 360px;
+    margin-inline: auto;
+  }
+
+  .py-xl {
+    padding-block: var(--py-xl);
+  }
+
+  .py-lg {
+    padding-block: var(--py-lg);
+  }
+
+  .py-md {
+    padding-block: var(--py-md);
+  }
+
+  .py-sm {
+    padding-block: var(--py-sm);
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  @media (width >= 80em) {
+    .container {
+      --max-width: 80rem; 
+    }
+  
+    .desktop-only {
+      display: initial;
+    }
+  }
