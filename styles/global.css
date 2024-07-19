@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+:root {
+
+  --brand-color-light: #60A5FA;
+  --brand-color-dark: #1D4ED8;
+  --bg-color: #0F172A;
+  --stroke-color: #1E293B;
+  --text-color-primary: #F1F5F;
+  --text-color-secondary: #CBD5E1;
+
+
+  --ff-archivo: "Archivo", sans-serif;
+
+  --fs-xl: 1.5rem;
+  --fs-lg: 1rem;
+  --fs-sm: .875rem;
+  --fs-esm: .625rem;
+
+  --fw-regular: 400;
+  --fw-md: 500;
+  --fw-sb: 600;
+  --fw-bold: 700;
+  --fw-eb: 800;
+}
+
+html {
+
+  h1{
+    font: var(--fw-eb) var(--fs-xl)/135% var(--ff-archivo);
+  }
+
+  h2 {
+    font: var(--fw-eb) var(--fs-lg)/140% var(--ff-archivo);
+  }
+
+  h3 {
+    font: var(--fw-eb) var(--fs-sm)/140% var(--ff-archivo);
+  }
+
+  span {
+    font: var(--fw-sb) var(--fs-sm)/145% var(--ff-archivo);
+  }
+
+  p {
+    font: var(--fw-regular) var(--fs-sm)/160% var(--ff-archivo);
+  }
+
+  strong {
+    font: var(--fw-md) var(--fs-esm)/120% var(--ff-archivo) ;
+  }
+}
