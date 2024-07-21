@@ -1,0 +1,131 @@
+
+main {
+  width: 360px;
+  overflow: hidden;
+}
+
+#featured {
+  gap: 1rem;
+
+ & .card {
+  width: 328px;
+  height: 416px;
+  position: relative;
+  margin-inline: auto;
+  background: url(../assets/Image\ 01.png) no-repeat center/cover;
+  border-radius: .25rem;
+  overflow: hidden;
+
+  h2 {
+    margin-top: .5rem;
+    color: var(--text-color-primary);
+    font-size: var(--fs-xl);
+    line-height: 135%;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    top: 50%;
+    background: linear-gradient(180deg, rgba(2, 6, 23, 0) 0%, #020617 100%);
+  }
+
+  figcaption {
+    position: absolute;
+    bottom: 1rem;
+  }
+ }
+
+ & .card-2 {
+  margin-inline: auto;
+
+  & >:nth-child(1) {
+    background: url(../assets/Image\ 02.png) no-repeat center/cover;
+  }
+
+  & >:nth-child(2) {
+    background: url(../assets/Image\ 03.png) no-repeat center/cover;
+  }
+
+  & >:nth-child(3) {
+    background: url(../assets/Image\ 04.png) no-repeat center/cover;
+  }
+
+  & >:nth-child(4) {
+    background: url(../assets/Image\ 05.png) no-repeat center/cover;
+  }
+
+  & figure {
+    position: relative;
+    overflow: hidden;
+    width: 328px;
+    height: 200px;
+    border-radius: .25rem;
+
+    h2 {
+      margin-top: .5rem;
+      color: var(--text-color-primary);
+      font-size: var(--fs-sm);
+      line-height: 140%;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(2, 6, 23, 0) 0%, #020617 100%);
+      border-radius: .25rem;
+    }
+
+    figcaption {
+      position: absolute;
+      bottom: .75rem;
+      padding-inline: .75rem;
+    }
+  }
+}
+}
+
+@media (width >= 80em) {
+  #featured {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 50% 1fr;
+
+    figcaption {
+      width: 100%;
+      padding: 1px;
+    }
+
+    & .card {
+     width: 100%;
+     }
+    }
+
+    & .card-2 {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+
+      & h2 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }

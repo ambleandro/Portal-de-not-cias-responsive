@@ -1,0 +1,38 @@
+header {
+
+  color: var(--text-color-primary);
+
+  & .container {
+    justify-content: space-between;
+  }
+
+  & h2 {
+    font-weight: var(--fw-bold);
+  }
+
+  & nav {
+    width: 360px;
+    overflow-x: hidden;
+    
+    & .span-wrapper {
+      gap: 2rem;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+}
+
+@media (width >= 80em) {
+  header {
+    & nav.container {
+      & .span-wrapper {
+        gap: initial;
+        justify-content: space-between;
+      }
+    }
+  }
+   
+
+  
+}
+

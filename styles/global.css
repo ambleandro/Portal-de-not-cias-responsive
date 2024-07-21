@@ -31,50 +31,67 @@
   --py-lg: .875rem;
   --py-md: 1rem;
   --py-sm: .5rem;
+
+  --px-lg: 1rem;
 }
 
-html {
-
+body {
   font: var(--ff-archivo);
-
-  h1{
-    font: var(--fw-eb) var(--fs-xl)/135% var(--ff-archivo);
-  }
-
-  h2 {
-    font: var(--fw-eb) var(--fs-lg)/140% var(--ff-archivo);
-  }
-
-  h3 {
-    font: var(--fw-eb) var(--fs-sm)/140% var(--ff-archivo);
-  }
-
-  span {
-    font: var(--fw-sb) var(--fs-sm)/145% var(--ff-archivo);
-  }
-
-  p {
-    font: var(--fw-regular) var(--fs-sm)/160% var(--ff-archivo);
-  }
-
-  strong {
-    font: var(--fw-md) var(--fs-esm)/120% var(--ff-archivo) ;
-    color: var(--text-color-primary);
-    padding: 4px 8px;
-    background: #1D4ED8;
-    box-shadow: 0px 4px 16px rgba(2, 6, 23, 0.25);
-    border-radius: 4px;
-    text-transform: uppercase;
-  }
-
-  body {
     background: var(--bg-color);
-  }
 }
 
-/* Linear gradiente do efeito nos cards
-background: linear-gradient(180deg, rgba(2, 6, 23, 0) 0%, #020617 100%); */
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
+img {
+  width: 100%;
+}
 
+h1{
+  font: var(--fw-eb) var(--fs-xl)/135% var(--ff-archivo);
+}
 
+h2 {
+  font: var(--fw-eb) var(--fs-lg)/140% var(--ff-archivo);
+}
+
+h3 {
+  font: var(--fw-eb) var(--fs-sm)/140% var(--ff-archivo);
+}
+
+span {
+  font: var(--fw-sb) var(--fs-sm)/145% var(--ff-archivo);
+}
+
+p {
+  font: var(--fw-regular) var(--fs-sm)/160% var(--ff-archivo);
+}
+
+strong {
+  font: var(--fw-md) var(--fs-esm)/120% var(--ff-archivo) ;
+  color: var(--text-color-primary);
+  padding: 4px 8px;
+  background: #1D4ED8;
+  box-shadow: 0px 4px 16px rgba(2, 6, 23, 0.25);
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  --max-width: 360px;
+  overflow: hidden;
+  width: min(var(--max-width), 100% - var(--px-lg) * 2);
+  margin-inline: auto;
+}
+
+main {
+  margin-top: 1rem;
+}
 

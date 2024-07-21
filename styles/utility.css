@@ -1,10 +1,4 @@
-  .container {
-    padding-inline: 1rem;
-    max-width: 360px;
-    margin-inline: auto;
-  }
-
-  .py-xl {
+    .py-xl {
     padding-block: var(--py-xl);
   }
 
@@ -24,12 +18,47 @@
     display: none;
   }
 
+  .flex {
+    display: flex;
+  }
+
+  .grid {
+    display: grid;
+  }
+
+  .grid-flow-col {
+    grid-auto-flow: column;
+  }
+
+  .grid-cols-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .gap-0\.5 {
+    gap: .5rem;
+  }
+
+  .gap-1 {
+    gap: 1rem;
+  }
+
+  .gap-2 {
+    gap: 2rem;
+  }
+
   @media (width >= 80em) {
     .container {
       --max-width: 80rem; 
+      --px-lg: 2rem;
     }
   
     .desktop-only {
       display: initial;
     }
+
+    
   }
