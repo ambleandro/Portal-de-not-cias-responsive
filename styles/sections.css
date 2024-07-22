@@ -4,6 +4,27 @@ main {
   overflow: hidden;
 }
 
+section header {
+  border-top: 1px solid var(--stroke-color);
+  padding-block: .875rem 1.5rem;
+
+  a {
+    justify-self: end;
+    align-items: center ;
+    gap: .5rem;
+
+    & span:nth-child(2) {
+      background-image: url(../assets/ArrowRight.svg);
+      width: 1rem;
+      height: 1rem;
+    }
+
+    &:hover span:nth-child(2){
+      background-image: url(../assets/ArrowRight-hover.svg);
+    }
+  }
+}
+
 #featured {
   gap: 1rem;
 
@@ -101,6 +122,37 @@ main {
 }
 }
 
+#weekly {
+  margin-inline: auto;
+  width: 328px;
+  margin-top: 2rem;
+
+  & img {
+    height: 160px;
+  }
+
+  & cols-4 {
+    gap: ;
+  }
+
+  figure {
+    position: relative;
+
+    & strong {
+      position: absolute;
+      top: .5rem;
+      left: .5rem;
+    }
+
+    & p {
+      margin-top: .5rem;
+      font-weight: var(--fw-eb);
+      color: var(--text-color-primary);
+      line-height: 140%;
+    }
+  }
+}
+
 @media (width >= 80em) {
   #featured {
     display: grid;
@@ -119,24 +171,33 @@ main {
       }
      }
      }
-    }
-
-    & .card-2 {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-
-      & figure {
-        & figcaption{
-          padding-inline: .75rem;
+     & .card-2 {
+       grid-template-columns: 1fr 1fr;
+       grid-template-rows: 1fr 1fr;
+ 
+       & figure {
+         & figcaption{
+           padding-inline: .75rem;
+         }
         }
+ 
+       & h2 {
+         overflow: hidden;
+         text-overflow: ellipsis;
+         display: -webkit-box;
+         -webkit-line-clamp: 3;
+         -webkit-box-orient: vertical;
        }
-
-      & h2 {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-      }
     }
+
+    }
+
+  #weekly {
+    margin-top: 5rem;
+    width: initial;
+
+    & .cols-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
   }
