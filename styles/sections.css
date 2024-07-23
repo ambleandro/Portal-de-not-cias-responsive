@@ -211,6 +211,7 @@ section header {
     }
 
     & h3 {
+      margin-top: .5rem;
       font-weight: var(--fw-regular);
       font-size: var(--fs-sm);
       color: var(--text-color-primary);
